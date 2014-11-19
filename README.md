@@ -13,6 +13,7 @@ This is what i put it into consideration when i implement my factories.
 
 Defeciencies in factory_girl
 ======================
+```ruby
 class Pane
   attr_accessible :title
   has_many :points
@@ -25,6 +26,7 @@ factory :pane do
 end
 factory :point do
 end
+```
 1. has_one
 I want to configure a point in a pane
 
