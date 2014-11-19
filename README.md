@@ -28,11 +28,9 @@ factory :point do
 end
 ```
 1. ###has_one
-
 I want to configure a point in a pane
 
 2. ###has_many
-
 I want to configure a point with many panes
 
-3. just accept domain objects not hashes
+3. ###just accept domain objects not hashes
