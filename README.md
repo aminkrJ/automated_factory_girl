@@ -1,36 +1,34 @@
 automated_factory_girl
 ======================
 
-When you work with complex domain model sometimes it is so tough to build the final object with minimum code possible for configuration. Its time when automated_factory_girl comes in.
+Taking a substential construction logic and encapsulated in a class all of its own is reaponsibility of factorty girl (builder pattern) in rails. But when it comes to writes thousand line of codes for a feature which needs the same construction routine for each scenario automated_factory_girl comes in.
 
-To make it clear why we need this i want to start with defining two trends that i am going to use in this document. 
+Consider that you are going to build a robot in an advanced project with all of its features. So behaviour testing is a must. For robot construction you need 10 lines of codes to configure a robot then test a specific behaviour. When you 1000 behaviour you have to write 10,000 line of code of same configuration into various files. First concern is DRY. Second concerns is when we need to add another configuration you have to deal with 10,000 lines in your code base. On the other hand, factory_girl has its own defeciencies.
 
-1. ###Effective numbers
-numbers which change the result of test are effective. We dont want this number rely on factories files. The reason behind that is so simple changing a number in factories should not affect a test in a file.
-
-2. ###Configurations
-This is what i put it into consideration when i implement my factories.
+TODO
 
 ##Defeciencies in factory_girl
 
 ```ruby
-class Pane
-  attr_accessible :title
-  has_many :points
+class Robot
+  attr_accessible :model
+  has_many :twists
 end
-class Point
-  attr_accessible :name, :lat, :lng
-  belongs_to :pane
+class Twist
+  attr_accessible :serial, :height, :width
+  belongs_to :model
 end
-factory :pane do
+factory :robot do
 end
-factory :point do
+factory :twist do
 end
 ```
-1. ###has_one
-I want to configure a point in a pane
 
-2. ###has_many
-I want to configure a point with many panes
-
-3. ###just accept domain objects not hashes
+1. ###No clear distinguish between effective & configuration agents
+TODO
+2. ###has_one issue
+TODO
+3. ###has_many issue
+TODO
+4. ###just accept domain objects not hashes
+TODO
