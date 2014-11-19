@@ -30,5 +30,3 @@ TODO
 TODO
 3. ###has_many issue
 TODO
-4. ###just accept domain objects not hashes
-TODO
