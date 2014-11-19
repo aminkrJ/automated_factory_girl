@@ -26,7 +26,9 @@ end
 
 1. ###No clear distinguish between effective & configuration agents
 TODO
+
 2. ###has_one issue
 TODO
+
 3. ###has_many issue
 TODO
